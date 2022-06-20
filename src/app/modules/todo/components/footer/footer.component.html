@@ -1,0 +1,15 @@
+<footer class="footer">
+  <span class="todo-count"><strong>{{ pendings }}</strong> item left</span>
+  <ul class="filters">
+    <li (click)="changeFilter('ALL')">
+      <a [class.selected]="'ALL' === currentFilter">All</a>
+    </li>
+    <li (click)="changeFilter('PENDING')">
+      <a [class.selected]="'PENDING' === currentFilter">Active</a>
+    </li>
+    <li (click)="changeFilter('COMPLETED')">
+      <a [class.selected]="'COMPLETED' === currentFilter">Completed</a>
+    </li>
+  </ul>
+  <button (click)="clearCompleted()" class="clear-completed">Clear completed</button>
+</footer>
